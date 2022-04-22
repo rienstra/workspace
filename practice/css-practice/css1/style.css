@@ -1,0 +1,40 @@
+body {
+  font-size: 16pt;
+}
+
+/* ul > li.red {
+  background: red;
+} */
+
+/* body:first-child {
+  background: blue;
+} */
+
+/* ul li:first-child {
+  color: blue;
+}
+
+li:first-child {
+  color: red;
+  font-weight: bold;
+}
+
+li:first-of-type {
+  color: lime;
+} */
+
+div.red::before {
+  content: "Before";
+  background-color: red;
+}
+
+.required::after {
+  content: "*";
+}
+
+/* [data-tooltip]:: */
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  content: attr(data-tooltip);
+}

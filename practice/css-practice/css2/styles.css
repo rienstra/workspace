@@ -1,0 +1,62 @@
+* {
+  outline: 1px solid red;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.box-one {
+  background-color: rgb(160, 201, 152);
+  border: 20px solid coral;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 50px;
+  box-sizing: border-box; /* uses height in width to cutdown */
+}
+
+.box-two {
+  background-color: dodgerblue;
+  border: 20px solid coral;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 50px;
+}
+
+.flexbox-container {
+  display: flex;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+  flex-shrink: 0;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+}
+
+.flexbox-item-3 {
+  min-height: 300px;
+  flex-grow: 1;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: #dfdfdf;
+  }
+}
+
+@media (orientation: landscape) and /* use, for or */ (max-width: 500px) {
+  .box-one {
+    color: green;
+  }
+}

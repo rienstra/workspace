@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../website01"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "slider"
+  }
+}

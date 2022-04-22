@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>rubens website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <h2 class="blogtext"><span>Ruben/Blog</span></h2>
+      <h3 class="locationtext"><span>Sneek, NL</span></h3>
+      <div class="rubenmain">
+        <img src="img/ruben2.png" alt="ruben">
+      </div>
+      <div class="icon1">
+        <img src="img/icon.png" alt="icon"/>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+<nav role="navigation" class="primary-navigation">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Blogs &dtrif;</a>
+      <ul class"dropdown">
+        <li><a href="#">Ruben</a></li>
+        <li><a href="#">Broers</a></li>
+        <li><a href="#">Honden</a></li>
+        <li><a href="#">Fitness</a></li>
+        <li><a href="#">Koud water</a></li>
+      </ul>
+    </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Site</a></li>
+  </ul>
+</nav>
+
+<!-- Carousel (w3schools)-->
+
+<div class="imgslider">
+  <div class="extra">
+    <div id="resizeIcon">
+      <img src="img/icon1.png">
+    </div>
+    <hr class="line1">
+  </div>
+  
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <div class="containertext">Informatie over Ruben</div>
+      <img src="img/ruben.png" style="width:100%">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">2 / 5</div>
+      <div class="containertext">Ruben zijn broers</div>
+      <img src="img/broers.png" style="width:100%">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">3 / 5</div>
+      <div class="containertext">Ruben zijn honden</div>
+      <img src="img/honden5.png" style="width:100%">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <div class="containertext">Fitness training van Ruben</div>
+      <img src="img/fitness.png" style="width:100%">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">5 / 5</div>
+      <img src="img/ijs1.jpg" style="width:100%">
+      <div class="containertext">Koud water training</div>
+    </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/ruben.png" style="width:100%" onclick="currentSlide(1)" alt="Ruben Rienstra">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/broers.png" style="width:100%" onclick="currentSlide(2)" alt="Broers van Ruben">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/honden5.png" style="width:100%" onclick="currentSlide(3)" alt="Honden van Ruben">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/fitness.png" style="width:100%" onclick="currentSlide(4)" alt="Ruben's Fitness Training">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/ijs1.jpg" style="width:100%" onclick="currentSlide(5)" alt="Koud water training">
+    </div>
+  </div>
+</div>
+
+<div class="responsive-text">Responsive test</div>
+
+</body>
+
+  <script src="script.js"></script>
+</html>
