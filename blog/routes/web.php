@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,15 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    return view('posts', [
-        'post' => Post::all()
-    ]);
+    $files = File::files(resource_path("posts"));
+
+    foreach ($files as $file);
+    // return view('posts', [
+    //    'posts' => Post:all()
+    // ]);
 });
 
 Route::get('posts/{post}', function ($slug) {
-    // Find a post by its slug and pass it to a view called "post"
     return view('post', [
         'post' => Post::find($slug)
     ]);
