@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Job;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,34 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// All Jobs
 Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'Latest Listings',
-        'listings' => [
-            [
-                'id' => 1,
-                'title' => 'Listing One',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et minus, officiis non aperiam aut voluptatibus excepturi natus vero in accusamus, ex repudiandae esse magnam nesciunt id possimus, qui illo!'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Listing Two',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum et minus, officiis non aperiam aut voluptatibus excepturi natus vero in accusamus, ex repudiandae esse magnam nesciunt id possimus, qui illo!'
-            ]
-        ]
+    return view('jobs', [
+        'heading' => 'Latest Jobs',
+        // becuase our all function is a static function we use ::all()
+        'jobs' => Job::all()
     ]);
 });
 
-// Route::get('/hello', function () {
-//     return response('<h1>Hello World</h1>', 200)
-//         ->header('Content-Type', 'text/plain')
-//         ->header('foo', 'bar');
-// });
-
-// Route::get('/posts/{id}', function ($id) {
-//     return response('Post ' . $id);
-// })->where('id', '[0-9]+');
-
-// Route::get('/search', function (Request $request) {
-//     return ($request->name . ' ' . $request->city);
-// });
+// Single Jobs
+Route::get('/jobs/{id}', function ($id) {
+    return view('job', [
+        'job' => Job::find($id)
+    ]);
+});
