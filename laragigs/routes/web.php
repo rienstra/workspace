@@ -19,14 +19,20 @@ use App\Models\Job;
 Route::get('/', function () {
     return view('jobs', [
         'heading' => 'Latest Jobs',
-        // becuase our all function is a static function we use ::all()
+        // becuase our all() function is a static function we use '::'
         'jobs' => Job::all()
     ]);
 });
 
 // Single Jobs
 Route::get('/jobs/{id}', function ($id) {
-    return view('job', [
-        'job' => Job::find($id)
-    ]);
+    $job = Job::find($id);
+
+    if ($job) {
+        return view('job', [
+            'job' => Job::find($id)
+        ]);
+    } else {
+        abort('404');
+    }
 });
