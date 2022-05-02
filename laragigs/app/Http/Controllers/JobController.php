@@ -43,6 +43,8 @@ class JobController extends Controller
             'description' => 'required'
         ]);
 
-        return redirect('/');
+        Job::create($formFields);
+
+        return redirect('/')->with('message', 'Job created succesfully!');
     }
 }
