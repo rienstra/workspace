@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JobController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
@@ -14,25 +15,23 @@ use App\Models\Job;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Common Resource Routes:
+// index - show all jobs
+// show - show single jobs
+// create - show form to create new job
+// store - store new job
+// edit - show form to edit job
+// update - update job
+// destroy - delete job
 
 // All Jobs
-Route::get('/', function () {
-    return view('jobs', [
-        'heading' => 'Latest Jobs',
-        // becuase our all() function is a static function we use '::'
-        'jobs' => Job::all()
-    ]);
-});
+Route::get('/', [JobController::class, 'index']);
+
+// Show Create Form 
+Route::get('/jobs/create', [JobController::class, 'create']);
+
+// Store job data
+Route::post('/jobs', [JobController::class, 'store']);
 
 // Single Jobs
-Route::get('/jobs/{id}', function ($id) {
-    $job = Job::find($id);
-
-    if ($job) {
-        return view('job', [
-            'job' => Job::find($id)
-        ]);
-    } else {
-        abort('404');
-    }
-});
+Route::get('/jobs/{job}', [JobController::class, 'show']);
