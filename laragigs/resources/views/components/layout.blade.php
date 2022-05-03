@@ -18,7 +18,8 @@
                     colors: {
                         laravel: "#ef3b2d",
                         custom_grey: "#FCFCFC",
-                        text_color: "#494949",
+                        text_color: "#3D3D3D",
+                        custom_blue: "#86CBE0",
                     },
                 },
             },
@@ -33,10 +34,12 @@
                 class="logo" /></a>
         <ul class="flex space-x-6 mr-6 text-lg">
             <li>
-                <a href="register.html" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a>
+                <a href="register.html" class="hover:text-laravel text-text_color"><i class="fa-solid fa-user-plus"></i>
+                    Register</a>
             </li>
             <li>
-                <a href="login.html" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <a href="login.html" class="hover:text-laravel text-text_color"><i
+                        class="fa-solid fa-arrow-right-to-bracket"></i>
                     Login</a>
             </li>
         </ul>
@@ -46,10 +49,10 @@
         {{ $slot }}
     </main>
     <footer
-        class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">
+        class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-custom_blue text-white h-24 mt-24 opacity-90 md:justify-center">
         <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
-        <a href="/jobs/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Post Job</a>
+        <a href="/jobs/create" class="absolute top-1/3 right-10 bg-text_color text-white py-2 px-5">Post Job</a>
     </footer>
     <x-flash-message />
 </body>
