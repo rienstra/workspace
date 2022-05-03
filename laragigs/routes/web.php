@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\JobController;
+use App\Models\Job;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Job;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ use App\Models\Job;
 Route::get('/', [JobController::class, 'index']);
 
 // Show Create Form 
-Route::get('/jobs/create', [JobController::class, 'create']);
+Route::get('/jobs/create', [JobController::class, 'create'])->middleware('auth');
 
 // Store Job Data
 Route::post('/jobs', [JobController::class, 'store']);
@@ -44,3 +45,18 @@ Route::delete('/jobs/{job}', [JobController::class, 'destroy']);
 
 // Single Jobs
 Route::get('/jobs/{job}', [JobController::class, 'show']);
+
+// Show Register/Create Form
+Route::get('/register', [UserController::class, 'create']);
+
+// Create New User
+Route::post('/users', [UserController::class, 'store']);
+
+// Log User Out
+Route::post('/logout', [UserController::class, 'logout']);
+
+// Show Login Form
+Route::get('/login', [UserController::class, 'login'])->name('login');
+
+// Log In Usser
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
