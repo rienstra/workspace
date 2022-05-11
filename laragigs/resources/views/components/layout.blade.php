@@ -35,7 +35,7 @@
         <ul class="flex space-x-6 mr-6 text-lg">
             @auth
                 <li>
-                    <span class="font-bold uppercae">
+                    <span class="font-semi-bold uppercae">
                         Welcome {{ auth()->user()->name }}
                     </span>
                 </li>
@@ -69,7 +69,7 @@
         {{ $slot }}
     </main>
     <footer
-        class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-custom_blue text-white h-24 mt-24 opacity-90 md:justify-center">
+        class="fixed bottom-0 left-0 w-full flex items-center justify-start font-semi-bold bg-custom_blue text-white h-24 mt-24 opacity-60 md:justify-center">
         <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
         <a href="/jobs/create" class="absolute top-1/3 right-10 bg-text_color text-white py-2 px-5">Post Job</a>

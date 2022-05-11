@@ -9,7 +9,7 @@
                     src="{{ $job->logo ? asset('storage/' . $job->logo) : asset('images/no_image_available.png') }}"
                     alt="" />
                 <h3 class="text-2xl mb-2">{{ $job->title }}</h3>
-                <div class="text-xl font-bold mb-4">{{ $job->company }}</div>
+                <div class="text-xl font-semi-bold mb-4">{{ $job->company }}</div>
 
                 <x-job-tags :tagsCsv="$job->tags"></x-job-tags>
                 <div class="text-lg my-4">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="border border-gray-200 w-full mb-6"></div>
                 <div>
-                    <h3 class="text-3xl font-bold mb-4">
+                    <h3 class="text-3xl font-semi-bold mb-4">
                         Job Description
                     </h3>
                     <div class="text-lg space-y-6">
@@ -38,7 +38,7 @@
             </div>
         </x-card>
 
-        <x-card class="mt-4 p-2 flex space-x-6">
+        {{-- <x-card class="mt-4 p-2 flex space-x-6">
             <a href="/jobs/{{ $job->id }}/edit">
                 <i class="fa-solid fa-pencil pr-1"></i> Edit
             </a>
@@ -48,6 +48,6 @@
                 @method('DELETE')
                 <button class="text-red-500"><i class="fa-solid fa-trash pr-1"></i>Detele</button>
             </form>
-        </x-card>
+        </x-card> --}}
     </div>
 </x-layout>

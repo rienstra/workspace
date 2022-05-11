@@ -2,10 +2,10 @@
      <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"></div>
 
      <div class="z-10">
-         <h1 class="text-6xl font-semi-bold uppercase text-custom_blue">
+         <h1 class="text-6xl font-semi-semi-bold uppercase text-custom_blue">
              Lara<span class="text-text_color">Gigs</span>
          </h1>
-         <p class="text-2xl text-gray-200 font-semi-bold my-4">
+         <p class="text-2xl text-gray-200 font-semi-semi-bold my-4">
              Find or post Laravel jobs & projects
          </p>
          <div>
